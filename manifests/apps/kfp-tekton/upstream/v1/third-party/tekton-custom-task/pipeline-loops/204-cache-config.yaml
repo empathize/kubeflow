@@ -23,7 +23,8 @@ metadata:
 data:
   disabled: "true"
   driver: "mysql"
-  host: "mysql.kubeflow.svc.cluster.local"
+  # host: "mysql.kubeflow.svc.cluster.local"
+  host: "10.0.2.227"
   port: "3306"
   dbName: "cachedb"
   user: "root"

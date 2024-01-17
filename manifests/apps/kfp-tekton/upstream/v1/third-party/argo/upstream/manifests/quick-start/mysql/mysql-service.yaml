@@ -5,8 +5,8 @@ metadata: # kpt-merge: /mysql
   labels:
     app: mysql
 spec:
-  selector:
-    app: mysql
+  # selector:
+  #   app: mysql
   ports:
     - protocol: TCP
       port: 3306
