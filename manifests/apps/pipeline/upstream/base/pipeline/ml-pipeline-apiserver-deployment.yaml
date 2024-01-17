@@ -27,7 +27,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: OBJECTSTORECONFIG_SECURE
-          value: "false"
+          value: "false" # 기존 false에서 true로 변경함
         - name: OBJECTSTORECONFIG_BUCKETNAME
           valueFrom:
             configMapKeyRef:
@@ -63,6 +63,11 @@ spec:
             configMapKeyRef:
               name: pipeline-install-config
               key: ConMaxLifeTime
+        - name: OBJECTSTORECONFIG_HOST # mlpipeline-minio-artifact에 추가함
+          valueFrom:
+            configMapKeyRef:
+              name: mlpipeline-minio-artifact
+              key: minioServiceHost
         - name: OBJECTSTORECONFIG_ACCESSKEY
           valueFrom:
             secretKeyRef:

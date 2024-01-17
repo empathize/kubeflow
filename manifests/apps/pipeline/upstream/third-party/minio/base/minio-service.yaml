@@ -8,5 +8,7 @@ spec:
     port: 9000
     protocol: TCP
     targetPort: 9000
-  selector:
-    app: minio
+  # selector:
+  #   app: minio
+  # type: ExternalName
+  # externalName: kr.object.ncloudstorage.com
