@@ -2,6 +2,7 @@ apiVersion: security.istio.io/v1beta1
 kind: AuthorizationPolicy
 metadata:
   name: minio-service
+  namespace: kubeflow
 spec:
   action: ALLOW
   selector:
@@ -25,6 +26,7 @@ metadata:
   name: ml-pipeline-minio
 spec:
   host: minio-service.kubeflow.svc.cluster.local
+  # host: 10.0.2.227
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL

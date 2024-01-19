@@ -1,0 +1,112 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-19T02:59:38Z"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Endpoints","metadata":{"annotations":{},"labels":{"application-crd-id":"kubeflow-pipelines"},"name":"mysql","namespace":"kubeflow"},"subsets":[{"addresses":[{"ip":"10.0.2.227"}],"ports":[{"name":"mysql","port":3306,"protocol":"TCP"}]}]}
+  creationTimestamp: "2024-01-19T02:59:25Z"
+  labels:
+    application-crd-id: kubeflow-pipelines
+  name: mysql
+  namespace: kubeflow
+  resourceVersion: "18863462"
+  uid: 2330e00a-11d1-4dde-9ae3-45ab6e56c3bd
+subsets:
+- addresses:
+  - ip: 172.16.84.133
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: metadata-grpc-deployment-68787fb4c4-957fg
+      namespace: kubeflow
+      uid: ae05973c-618e-4c3c-b36e-2d01b3ad62ad
+  - ip: 172.16.84.137
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: metacontroller-0
+      namespace: kubeflow
+      uid: 4827ec20-e8c5-4007-a9b7-bc63bb0b7631
+  - ip: 172.16.84.140
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: ml-pipeline-ui-5c955bf9b-h9mww
+      namespace: kubeflow
+      uid: cdf75b9d-1646-4424-ae82-84ce45d684fc
+  - ip: 172.16.84.156
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: ml-pipeline-visualizationserver-776c889fb5-2nwjv
+      namespace: kubeflow
+      uid: b240a354-4e63-472c-8444-a5f56cde9ce9
+  - ip: 172.16.84.159
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: workflow-controller-755f78c66b-wqfx2
+      namespace: kubeflow
+      uid: 857e7078-f91c-4bd7-8182-bdff8eab46fb
+  - ip: 172.16.84.164
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: ml-pipeline-persistenceagent-5f4c4c6df9-cm2wt
+      namespace: kubeflow
+      uid: f508e150-7ed1-4f68-883d-f66abdb82a1b
+  - ip: 172.16.84.170
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: kubeflow-pipelines-profile-controller-cb6464445-mfjts
+      namespace: kubeflow
+      uid: 7e5c0cbc-0415-4708-852e-2c3b854cea40
+  - ip: 172.16.84.173
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: metadata-writer-7fd7dbb676-rk7sp
+      namespace: kubeflow
+      uid: 5a7fbcad-e891-4368-889e-13278867ddc2
+  - ip: 172.16.84.180
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: metadata-envoy-deployment-9bc99d887-dnsdd
+      namespace: kubeflow
+      uid: f35ce7e6-d756-402d-935c-79765274003a
+  - ip: 172.16.84.182
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: ml-pipeline-viewer-crd-68f6bb9bfd-nkn27
+      namespace: kubeflow
+      uid: 739b2d42-5a8b-49f5-afd9-8cbef25f325d
+  - ip: 172.16.84.187
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: cache-server-c78dc6699-rgsh2
+      namespace: kubeflow
+      uid: 14447a35-8ecb-4983-9136-f46499b90193
+  - ip: 172.16.84.188
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: ml-pipeline-scheduledworkflow-7b9d87cc65-fwb9v
+      namespace: kubeflow
+      uid: 045f6810-d378-4514-b71f-653ca61729d6
+  notReadyAddresses:
+  - ip: 172.16.84.149
+    nodeName: node-1
+    targetRef:
+      kind: Pod
+      name: ml-pipeline-86d865dc64-ldfpv
+      namespace: kubeflow
+      uid: 2c888de6-6b2d-4751-802a-2111babe15df
+  ports:
+  - name: mysql
+    port: 3306
+    protocol: TCP
